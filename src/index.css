@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(234, 179, 8, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(234, 179, 8, 0.1) 1px, transparent 1px);
+  background-size: 8.33% 8.33%;
+}
+
+@keyframes slideIn {
+  from { width: 0%; }
+  to { width: var(--target-width, 0%); }
 }
