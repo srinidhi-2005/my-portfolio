@@ -30,7 +30,7 @@ const Skills = () => {
     { name: 'Machine Learning', level: 50, category: 'ai', description: 'Predictive models' },
     { name: 'Deep Learning', level: 50, category: 'ai', description: 'Neural network architectures' },
     { name: 'PyTorch', level: 70, category: 'ai', description: 'Deep learning framework' },
-    { name: 'Neural Networks', level: 80, category: 'ai', description: 'Artificial neural networks' },
+    { name: 'Neural Networks', level: 80, category: 'ai', description: 'ANNs, CNNs' },
     { name: 'Transformers', level: 70, category: 'ai', description: 'Attention-based models' },
     
     // Tools

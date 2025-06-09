@@ -3,7 +3,6 @@ import { ChevronLeft, ChevronRight, ExternalLink, Github, Code2, Zap, ZapOff } f
 import { useNavigate } from 'react-router-dom';
 import Tooltip from '../components/Tooltip';
 import { projectsData } from '../data/projectsData';
-
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -42,10 +41,8 @@ const Projects = () => {
   };
 
   const handleGithubClick = () => {
-    if (projects[currentIndex].githubUrl !== '#') {
-      window.open(projects[currentIndex].githubUrl, '_blank');
-    }
-  };
+    window.open("https://github.com/srinidhi-2005", "_blank");
+  };  
 
   const truncateDescription = (description, wordLimit) => {
     const words = description.split(' ');

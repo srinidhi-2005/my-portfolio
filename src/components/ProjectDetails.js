@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { projectsData } from '../data/projectsData';
 import Bg from "../assets/img.jpg";
-import { 
-  ExternalLink, 
-  Github, 
-  ArrowLeft, 
-  Code2, 
+import {
+  ExternalLink,
+  Github,
+  ArrowLeft,
+  Code2,
   Calendar,
   Users,
   Target,
@@ -42,13 +42,13 @@ const ProjectDetails = () => {
   }, [project]);
 
   const handlePrevImage = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       (prevIndex - 1 + project.images.length) % project.images.length
     );
   };
 
   const handleNextImage = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       (prevIndex + 1) % project.images.length
     );
   };
@@ -59,7 +59,7 @@ const ProjectDetails = () => {
   if (!project) {
     return (
       <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
-          <h1 className="text-4xl font-bold text-yellow-400 mb-4">Project Not Found</h1>
+        <h1 className="text-4xl font-bold text-yellow-400 mb-4">Project Not Found</h1>
         <button
           onClick={() => navigate('/')}
           className="px-6 py-3 bg-yellow-400 text-black rounded-lg font-semibold hover:bg-yellow-300 transition-colors"
@@ -71,7 +71,7 @@ const ProjectDetails = () => {
   }
 
   return (
-    <section 
+    <section
       id='project-details'
       className="min-h-screen bg-black text-white relative py-20 px-6 overflow-hidden"
       style={{
@@ -121,15 +121,15 @@ const ProjectDetails = () => {
 
         {/* Main Content Container */}
         <div className="rounded-3xl p-8 md:p-12 border border-yellow-400/30 shadow-2xl shadow-yellow-400/10">
-          
+
           {/* Project Header */}
           <div className="text-center mb-12">
             {/* Project Image Slider */}
             {project.images && project.images.length > 0 ? (
               <div className="relative mb-8 group">
                 <img
-                  src={Bg}
-                  alt={project.title}
+                  src={project.images[currentImageIndex]}
+                  alt={`${project.title} - Image ${currentImageIndex + 1}`}
                   className="w-full max-h-96 object-contain rounded-2xl shadow-lg border border-yellow-400/20 mx-auto transition-opacity duration-500"
                   style={{ maxWidth: '80%' }}
                 />
@@ -152,13 +152,29 @@ const ProjectDetails = () => {
                     </button>
                   </>
                 )}
+
+                {/* Image Indicators */}
+                {project.images.length > 1 && (
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                    {project.images.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentImageIndex(index)}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentImageIndex
+                            ? 'bg-yellow-400 w-4'
+                            : 'bg-gray-400/50 hover:bg-gray-300'
+                          }`}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             ) : (
               <div className="w-full max-h-96 h-64 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl mb-8 flex items-center justify-center mx-auto border border-yellow-400/20" style={{ maxWidth: '80%' }}>
                 <Code2 className="w-20 h-20 text-yellow-400/50" />
               </div>
             )}
-            
+
             {/* Title and Subtitle */}
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-yellow-400/20 text-yellow-400 text-sm font-medium rounded-full border border-yellow-400/30 mb-4">
@@ -173,29 +189,26 @@ const ProjectDetails = () => {
             {/* Status and Type Indicators */}
             <div className="flex flex-wrap items-center justify-center gap-4">
               {/* Status Indicator */}
-              <div className={`flex items-center space-x-2 px-4 py-2 rounded-full backdrop-blur-sm ${
-                project.status === 'Completed' 
-                  ? 'bg-green-500/20 border border-green-400/30' 
+              <div className={`flex items-center space-x-2 px-4 py-2 rounded-full backdrop-blur-sm ${project.status === 'Completed'
+                  ? 'bg-green-500/20 border border-green-400/30'
                   : project.status === 'In Progress'
-                  ? 'bg-blue-500/20 border border-blue-400/30'
-                  : 'bg-yellow-500/20 border border-yellow-400/30'
-              }`}>
-                <div className={`w-2 h-2 rounded-full animate-pulse ${
-                  project.status === 'Completed' ? 'bg-green-400' : 
-                  project.status === 'In Progress' ? 'bg-blue-400' : 'bg-yellow-400'
-                }`}></div>
+                    ? 'bg-blue-500/20 border border-blue-400/30'
+                    : 'bg-yellow-500/20 border border-yellow-400/30'
+                }`}>
+                <div className={`w-2 h-2 rounded-full animate-pulse ${project.status === 'Completed' ? 'bg-green-400' :
+                    project.status === 'In Progress' ? 'bg-blue-400' : 'bg-yellow-400'
+                  }`}></div>
                 <span className="text-sm font-medium text-white">{project.status}</span>
               </div>
 
               {/* Project Type */}
-              <div className={`flex items-center space-x-2 px-4 py-2 rounded-full backdrop-blur-sm ${
-                project.type === 'Individual' 
-                  ? 'bg-purple-500/20 border border-purple-400/30' 
+              <div className={`flex items-center space-x-2 px-4 py-2 rounded-full backdrop-blur-sm ${project.type === 'Individual'
+                  ? 'bg-purple-500/20 border border-purple-400/30'
                   : 'bg-orange-500/20 border border-orange-400/30'
-              }`}>
+                }`}>
                 <Users className="w-4 h-4" />
                 <span className="text-sm font-medium text-white">{project.type}</span>
-                </div>
+              </div>
 
               {/* Duration (if available) */}
               {project.duration && (
@@ -204,10 +217,10 @@ const ProjectDetails = () => {
                   <span className="text-sm font-medium text-white">{project.duration}</span>
                 </div>
               )}
+            </div>
           </div>
-        </div>
 
-        {/* Project Overview */}
+          {/* Project Overview */}
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-yellow-400/20 rounded-lg flex items-center justify-center">
@@ -218,9 +231,9 @@ const ProjectDetails = () => {
             <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/30">
               <p className="text-lg text-gray-300 leading-relaxed">{project.description}</p>
             </div>
-        </div>
+          </div>
 
-        {/* Technologies Used */}
+          {/* Technologies Used */}
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-yellow-400/20 rounded-lg flex items-center justify-center">
@@ -236,11 +249,11 @@ const ProjectDetails = () => {
                 >
                   {tech}
                 </span>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
 
-        {/* Key Features */}
+          {/* Key Features */}
           {project.features && project.features.length > 0 && (
             <div className="mb-12">
               <div className="flex items-center gap-3 mb-6">
@@ -254,10 +267,10 @@ const ProjectDetails = () => {
                   <div key={index} className="flex items-start gap-3 p-4 bg-gray-800/30 rounded-lg border border-gray-700/30 hover:border-yellow-400/30 transition-colors">
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
                     <span className="text-gray-300">{feature}</span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
           )}
 
           {/* My Role & Responsibilities (for team projects) */}
@@ -290,11 +303,11 @@ const ProjectDetails = () => {
                     ))}
                   </ul>
                 )}
-          </div>
-        </div>
+              </div>
+            </div>
           )}
 
-        {/* Challenges & Solutions */}
+          {/* Challenges & Solutions */}
           {project.challenges && project.challenges.length > 0 && (
             <div className="mb-12">
               <div className="flex items-center gap-3 mb-6">
@@ -303,19 +316,19 @@ const ProjectDetails = () => {
                 </div>
                 <h2 className="text-3xl font-bold text-white">Challenges & Solutions</h2>
               </div>
-          <div className="space-y-4">
-            {project.challenges.map((challenge, index) => (
+              <div className="space-y-4">
+                {project.challenges.map((challenge, index) => (
                   <div key={index} className="p-6 bg-gradient-to-r from-red-500/5 to-orange-500/5 rounded-lg border border-red-400/20 hover:border-red-400/40 transition-colors">
                     <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-red-400/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                      <div className="w-6 h-6 bg-red-400/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                      </div>
+                      <p className="text-gray-300 leading-relaxed">{challenge}</p>
+                    </div>
                   </div>
-                  <p className="text-gray-300 leading-relaxed">{challenge}</p>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
           )}
 
           {/* Results & Impact */}
@@ -324,10 +337,10 @@ const ProjectDetails = () => {
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 bg-yellow-400/20 rounded-lg flex items-center justify-center">
                   <TrendingUp className="w-5 h-5 text-yellow-400" />
-          </div>
+                </div>
                 <h2 className="text-3xl font-bold text-white">Results & Impact</h2>
-        </div>
-          <div className="grid md:grid-cols-2 gap-6">
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
                 {project.results.metrics && (
                   <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 p-6 rounded-xl border border-green-400/30">
                     <div className="flex items-center gap-2 mb-3">
@@ -429,38 +442,38 @@ const ProjectDetails = () => {
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-300">{enhancement}</span>
-                </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
             </div>
           )}
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
-            <a 
+            <a
               href={project.liveUrl}
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
               className="flex-1 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black py-4 px-8 rounded-xl font-semibold hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-yellow-400/25 flex items-center justify-center space-x-2"
             >
               <ExternalLink className="w-5 h-5" />
               <span>View Live Project</span>
             </a>
-            <a 
+            <a
               href={project.githubUrl}
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
               className="flex-1 bg-white/10 backdrop-blur-sm text-white py-4 px-8 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center space-x-2"
             >
               <Github className="w-5 h-5" />
               <span>View Source Code</span>
             </a>
-        </div>
+          </div>
 
           {/* Navigation to Other Projects */}
           <div className="mt-12 pt-8 border-t border-gray-700/50">
-        <div className="text-center">
+            <div className="text-center">
               <p className="text-gray-400 mb-4">Explore more projects</p>
               <button
                 onClick={() => navigate('/')}

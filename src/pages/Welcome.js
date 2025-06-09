@@ -95,7 +95,7 @@ export default function WelcomeSection() {
         
         <div className="relative group">
           <a
-            href={require('../assets/my resumeee.pdf')}
+            href={require('../assets/Srinidhi Martha Resume.pdf')}
             download="Srinidhi Martha_Resume.pdf"
             className="border-2 border-yellow-400 rounded-full p-2 text-gray-400 hover:text-yellow-400 hover:border-white transition-colors shadow-lg bg-black/60 backdrop-blur block"
           >

@@ -13,8 +13,8 @@ export const projectsData = [
     year: '2024',
     status: 'Completed',
     color: 'from-yellow-400/20 to-orange-500/20',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: '/',
+    githubUrl: 'https://github.com/srinidhi-2005',
     type: 'Team',
     features: [
       'Automated water quality detection without manual sampling',
@@ -65,10 +65,10 @@ export const projectsData = [
     technologies: ['Python', 'Neural Networks', 'MNIST Dataset', 'PyTorch'],
     category: 'AI/ML',
     year: '2025',
-    status: 'In Progress',
+    status: 'Completed',
     color: 'from-yellow-400/20 to-lime-500/20',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: '/',
+    githubUrl: 'https://github.com/srinidhi-2005',
     type: 'Individual',
     features: [
       'Built-from-scratch neural network with no external ML libraries',
@@ -100,10 +100,10 @@ export const projectsData = [
     },
     myRole: "ML engineer",
     teamSize: 1,
-    duration: "1 month",
+    duration: "2 month",
     timeline: {
       start: "May 2025",
-      end: "Present"
+      end: "Jun 2025"
     },
     lessonsLearned: [
       "Deep understanding of neural network internals and mathematics",
@@ -125,8 +125,8 @@ export const projectsData = [
     year: '2025',
     status: 'In Progress',
     color: 'from-yellow-400/20 to-amber-500/20',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: '/',
+    githubUrl: 'https://github.com/srinidhi-2005',
     type: 'Individual',
     features: [
       'Lost & Found item reporting with images and descriptions',
@@ -186,8 +186,8 @@ export const projectsData = [
     year: '2025',
     status: 'In Progress',
     color: 'from-yellow-400/20 to-yellow-600/20',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: '/',
+    githubUrl: 'https://github.com/srinidhi-2005',
     type: 'Team',
     features: [
       'Dual-model Transformer architecture for summarization and Q&A',
