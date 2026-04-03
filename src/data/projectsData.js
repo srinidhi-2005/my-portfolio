@@ -1,237 +1,215 @@
-import img from '../assets/image.jpg';
-import img1 from '../assets/img.jpg';
+import img1_1 from '../assets/img1_1.png';
+import img1_2 from '../assets/img1_2.png';
+import img1_3 from '../assets/img1_3.png';
+import img2_1 from '../assets/img2_1.png';
+import img2_2 from '../assets/img2_2.png';
+import img2_3 from '../assets/img2_3.png';
+import img from '../assets/img.jpg';
+import img1 from '../assets/image.jpg';
 
 export const projectsData = [
   {
     id: 1,
-    title: 'CNN - Based Lake Water Quality Estimation Using Satellite Images',
-    subtitle: 'Advanced AI system for environmental monitoring',
-    description: 'A comprehensive machine learning solution that analyzes satellite imagery to classify lake water quality as "Good" or "Poor". Uses convolutional neural networks with Landsat and Sentinel-2 satellite data to provide cost-effective and scalable environmental monitoring for water resource management.',
-    images: [img, img, img1],
-    technologies: ['React JS', 'Tailwind CSS', 'Node + Express JS', 'MongoDB', 'Flask', 'CNNs', 'PyTorch'],
+    title: 'Transformer-based Legal Document Summarization for Indian Court Judgments',
+    subtitle: 'Deep Learning based NLP system for legal text summarization',
+    
+    description: 'Developed a Transformer-based NLP system using BART and PyTorch to generate abstractive summaries of Indian legal judgments. The system processes long legal documents using efficient tokenization and chunking techniques to produce coherent and accurate summaries, improving accessibility of complex legal texts.',
+
+    thumbnail: [img1_1],
+    images: [img1_1, img1_2, img1_3],
+
+    technologies: ['Python', 'PyTorch', 'Transformers', 'NLP'],
+
     category: 'AI/ML',
-    year: '2024',
+    year: '2025',
     status: 'Completed',
-    color: 'from-yellow-400/20 to-orange-500/20',
+    color: 'from-yellow-400/20 to-yellow-600/20',
+
     liveUrl: '/',
     githubUrl: 'https://github.com/srinidhi-2005',
+
     type: 'Team',
+
     features: [
-      'Automated water quality detection without manual sampling',
-      'CNN model with 90%+ accuracy for water condition predictions',
-      'Satellite image analysis using Landsat & Sentinel-2 data',
-      'Interactive user interface with real-time predictions',
-      'Multi-page navigation and interactive dashboards',
-      'Historical data visualization',
-      'Image upload functionality for real-time analysis'
+      'Fine-tuned BART-based Transformer model for abstractive text summarization',
+      'Handled long legal documents using tokenization and chunking (1024 tokens)',
+      'Built NLP preprocessing pipeline for cleaning and structuring legal text data',
+      'Achieved ROUGE-1: 0.477 and BERT F1: 0.845 on evaluation metrics',
+      'Integrated model into a web-based interface for document summarization'
     ],
+
     challenges: [
-      'Processing and preprocessing satellite image datasets',
-      'Training CNN models for accurate binary classification',
-      'Integrating deep learning models with web interface',
-      'Ensuring seamless frontend-backend communication'
+      'Handling long and complex legal documents exceeding model input limits',
+      'Maintaining context during text chunking and summarization',
+      'Preprocessing noisy and unstructured legal text data',
+      'Optimizing model performance for accurate summaries'
     ],
+
     futureEnhancements: [
-      'Multi-class water quality classification',
-      'Integration with more satellite data sources',
-      'Mobile application for field use',
-      'Advanced preprocessing techniques for better accuracy'
+      'Extend system for legal question answering',
+      'Improve summarization quality with advanced transformer models',
+      'Support multi-document summarization',
+      'Add multilingual capabilities for legal texts'
     ],
-    methodology: "Agile development with weekly sprints, user testing, and iterative design",
+
+    methodology: "Model fine-tuning using PyTorch, NLP preprocessing, and evaluation using ROUGE and BERT-based metrics",
+
     results: {
-      metrics: "Over 95% accuracy in water quality classification (Good/Poor)",
-      impact: "Enables efficient monitoring for researchers and environmental authorities"
+      metrics: "ROUGE-1: 0.477, BERT F1: 0.845",
+      impact: "Improves accessibility of complex legal documents by generating concise and meaningful summaries"
     },
-    myRole: "Frontend developer and ML engineer",
-    teamSize: 6,
+
+    myRole: "AI/ML Developer (Model Development & NLP Pipeline)",
+    teamSize: 7,
     duration: "4 months",
+
     timeline: {
-      start: "Oct 2024",
-      end: "Jan 2025"
+      start: "April 2025",
+      end: "July 2025"
     },
+
     lessonsLearned: [
-      "Importance of accurate satellite data preprocessing",
-      "Effective frontend-backend integration for AI applications",
-      "User experience design for technical applications",
-      "Team collaboration in interdisciplinary projects"
+      "Understanding of transformer-based architectures for NLP tasks",
+      "Importance of preprocessing in handling real-world text data",
+      "Handling long sequence inputs in NLP models",
+      "Evaluating NLP models using ROUGE and semantic metrics",
+      "Experience in building end-to-end NLP pipelines"
     ]
   },
   {
     id: 2,
-    title: 'Digitron - Handwritten Digit Recognition System Using Deep Learning',
-    subtitle: 'High-accuracy digit recognition system',
-    description: 'A deep learning model developed from scratch to recognize handwritten digits from the MNIST dataset. Built without using any prebuilt libraries or frameworks, showcasing a ground-up implementation of all neural network components including forward propagation, backpropagation, and gradient descent optimization.',
-    images: [img, img1, img],
-    technologies: ['Python', 'Neural Networks', 'MNIST Dataset', 'PyTorch'],
+    title: 'CNN-based Lake Water Quality Estimation using Satellite Images',
+    subtitle: 'Deep Learning system for environmental monitoring',
+
+    description: 'Developed a Convolutional Neural Network (CNN) model using PyTorch to classify lake water quality from satellite imagery. The system processes remote sensing data and predicts water conditions, providing a scalable approach for environmental monitoring.',
+
+    thumbnail: [img2_1],
+    images: [img2_1, img2_2, img2_3],
+
+    technologies: ['Python', 'PyTorch', 'CNN', 'MERN Stack'],
+
     category: 'AI/ML',
     year: '2025',
     status: 'Completed',
-    color: 'from-yellow-400/20 to-lime-500/20',
+    color: 'from-yellow-400/20 to-orange-500/20',
+
     liveUrl: '/',
-    githubUrl: 'https://github.com/srinidhi-2005',
-    type: 'Individual',
+    githubUrl: 'https://github.com/srinidhi-2005/Aqua-Monitor',
+
+    type: 'Team',
+
     features: [
-      'Built-from-scratch neural network with no external ML libraries',
-      'Manual MNIST data handling with binary file parsing',
-      'Fully connected architecture with custom layers',
-      'Custom implementation of activation functions',
-      'Manual backpropagation and gradient descent optimization',
-      'Cross-entropy loss function implementation',
-      'High accuracy digit classification using only Python and NumPy'
+      'Designed and trained CNN model for binary classification of water quality',
+      'Achieved 95% accuracy on satellite image dataset',
+      'Performed data preprocessing and feature extraction on remote sensing data',
+      'Optimized CNN architecture for improved classification performance',
+      'Developed a web interface using MERN stack for visualization of model predictions'
     ],
+
     challenges: [
-      'Implementing neural network components from scratch without frameworks',
-      'Manual implementation of backpropagation algorithm',
-      'Parsing and preprocessing MNIST binary file format',
-      'Optimizing gradient descent for efficient training',
-      'Debugging custom neural network architecture',
-      'Achieving reliable performance without prebuilt optimizations'
+      'Preprocessing satellite image data for model training',
+      'Handling variability in image quality and environmental conditions',
+      'Optimizing CNN model for better generalization',
+      'Integrating model outputs with web interface'
     ],
+
     futureEnhancements: [
-      'Implementation of convolutional layers from scratch',
-      'Optimization algorithms implementation',
-      'Visualization tools for training metrics',
-      'Performance comparison with framework implementations'
+      'Extend to multi-class water quality classification',
+      'Incorporate additional satellite datasets for improved accuracy',
+      'Enhance model performance with advanced architectures',
+      'Deploy as a scalable monitoring system'
     ],
-    methodology: "Ground-up development approach focusing on fundamental understanding of neural network mechanics",
+
+    methodology: "Data preprocessing, CNN model training using PyTorch, and performance evaluation using accuracy metrics",
+
     results: {
-      metrics: "Achieved reliable performance in digit classification using only raw Python and NumPy implementation",
-      impact: "Demonstrates core AI/ML concepts built independently, improving foundational understanding of deep learning and model training"
+      metrics: "95% classification accuracy",
+      impact: "Provides a scalable approach for monitoring lake water quality using satellite imagery"
     },
-    myRole: "ML engineer",
-    teamSize: 1,
-    duration: "2 month",
+
+    myRole: "AI/ML Developer (CNN Model) & Frontend Integration",
+    teamSize: 6,
+    duration: "5 months",
+
     timeline: {
-      start: "May 2025",
-      end: "Jun 2025"
+      start: "October 2024",
+      end: "February 2025"
     },
+
     lessonsLearned: [
-      "Deep understanding of neural network internals and mathematics",
-      "Importance of proper weight initialization and learning rates",
-      "Challenges and complexities of implementing backpropagation manually",
-      "Value of understanding fundamentals before using high-level frameworks",
-      "Optimization techniques and their impact on training efficiency",
-      "Data preprocessing importance in machine learning pipelines"
+      "Understanding CNN architectures for image classification",
+      "Importance of preprocessing in computer vision tasks",
+      "Handling real-world satellite image datasets",
+      "Integrating AI models with web applications",
+      "Collaborating in team-based AI projects"
     ]
   },
   {
     id: 3,
-    title: 'FindIt - Online Campus Lost & Found Portal',
-    subtitle: 'Smart campus solution for lost item recovery',
-    description: 'An innovative web-based portal developed to streamline the lost and found process within college campuses. The platform leverages technology to bridge the gap between lost items and their rightful owners, promoting trust, transparency, and ease of access with an intuitive UI and robust backend.',
+    title: 'MNIST Handwritten Digit Recognition with Docker & CI/CD',
+    subtitle: 'Deep Learning model with containerization and automation',
+
+    description: 'Built a neural network model from scratch in Python to classify handwritten digits from the MNIST dataset. The project demonstrates core deep learning concepts along with containerization using Docker and automation through CI/CD pipelines.',
+
+    thumbnail: [img],
     images: [img, img1, img],
-    technologies: ['React JS', 'Tailwind CSS', 'Node JS', 'Express JS', 'MongoDB'],
-    category: 'Full Stack',
-    year: '2025',
-    status: 'In Progress',
-    color: 'from-yellow-400/20 to-amber-500/20',
-    liveUrl: '/',
-    githubUrl: 'https://github.com/srinidhi-2005',
-    type: 'Individual',
-    features: [
-      'Lost & Found item reporting with images and descriptions',
-      'Smart matching system with filters and search algorithms',
-      'Fully responsive design with smooth animations',
-      'Dark/light mode support',
-      'Secure admin panel for item claim verification',
-      'Real-time updates and dynamic components',
-      'Parallax effects for enhanced user experience',
-      'JWT-based authentication with role-based access',
-      'Cloud-based image storage and management'
-    ],
-    challenges: [
-      'Implementing accurate item matching algorithms',
-      'Creating intuitive and responsive user interface',
-      'Ensuring secure authentication and authorization',
-      'Managing image uploads and cloud storage integration',
-      'Implementing real-time updates and notifications',
-      'Designing efficient admin verification workflow'
-    ],
-    futureEnhancements: [
-      'AI-powered image recognition for better matching',
-      'Mobile app development for easier access',
-      'Push notifications for instant updates',
-      'Integration with campus security systems',
-      'Multi-campus support',
-      'Advanced analytics and reporting dashboard'
-    ],
-    methodology: "Individual development with iterative design, user feedback integration, and continuous improvement",
-    results: {
-      metrics: "Fully responsive web application with smooth animations and efficient item management",
-      impact: "Digitizes campus lost and found process, fostering collaborative environment and enhancing trust, accountability, and convenience across the institution"
-    },
-    teamSize: 1,
-    duration: "Ongoing (2+ months)",
-    timeline: {
-      start: "April 2024",
-      end: "Present"
-    },
-    lessonsLearned: [
-      "Importance of responsive design and user experience",
-      "Effective state management in React applications",
-      "Implementing secure authentication and authorization",
-      "Cloud storage integration and image management",
-      "Building efficient search and filtering algorithms",
-      "Creating admin interfaces for content management"
-    ]
-  },
-  {
-    id: 4,
-    title: 'Transformer Based Architecture for Legal Question Answering and Summarization',
-    subtitle: 'AI-powered legal document processing system',
-    description: 'A cutting-edge GenAI project that leverages Transformer-based Deep Learning techniques to simplify complex legal texts and answer user queries from legal documents. Built using pre-trained models with PyTorch, the system processes lengthy legal judgments to provide coherent summaries and precise answers, making legal information more accessible.',
-    images: [img, img1, img],
-    technologies: ['React JS', 'Tailwind CSS', 'Node + Express JS', 'MongoDB', 'Flask', 'GenAI', 'Transformers'],
+
+    technologies: ['Python', 'Neural Networks', 'NumPy', 'Docker', 'GitHub Actions (CI/CD)'],
+
     category: 'AI/ML',
-    year: '2025',
-    status: 'In Progress',
-    color: 'from-yellow-400/20 to-yellow-600/20',
+    year: '2026',
+    status: 'Completed',
+    color: 'from-yellow-400/20 to-lime-500/20',
+
     liveUrl: '/',
-    githubUrl: 'https://github.com/srinidhi-2005',
-    type: 'Team',
+    githubUrl: 'https://github.com/srinidhi-2005/digitron',
+
+    type: 'Individual',
+
     features: [
-      'Dual-model Transformer architecture for summarization and Q&A',
-      'End-to-end training with custom attention mechanisms',
-      'Legal domain expertise with Indian court judgments dataset',
-      'Text extraction from real legal documents',
-      'Voice-based query support with TTS integration',
-      'Custom tokenizer and positional encoding',
-      'Real-time legal document processing',
-      'Context-aware response generation for legal queries'
+      'Built neural network model from scratch for handwritten digit classification',
+      'Achieved 97.6% accuracy on MNIST dataset',
+      'Implemented core concepts including forward propagation, backpropagation, and gradient descent',
+      'Performed data preprocessing and model training pipeline',
+      'Containerized the application using Docker for consistent execution',
+      'Implemented CI/CD pipeline using GitHub Actions for automated testing and builds'
     ],
+
     challenges: [
-      'Training models on complex legal domain data',
-      'Handling lengthy legal documents and maintaining context',
-      'Extracting and preprocessing text from legal Text files/PDFs',
-      'Implementing custom attention mechanisms manually',
-      'Ensuring accuracy in legal interpretations and summaries'
+      'Implementing neural network logic from scratch without high-level frameworks',
+      'Optimizing training process for better accuracy and generalization',
+      'Debugging model performance and convergence issues',
+      'Setting up Docker environment and CI/CD workflow'
     ],
+
     futureEnhancements: [
-      'Advanced voice interaction capabilities',
-      'Multi-language support for legal documents',
-      'Integration with legal databases and case law',
-      'Real-time legal updates and notifications',
-      'Mobile app for legal professionals'
+      'Extend model using advanced architectures for improved performance',
+      'Add visualization for training metrics and predictions',
+      'Deploy as an interactive application for real-time predictions'
     ],
-    methodology: "Agile development with focus on custom model architecture, iterative training, and legal domain validation",
+
+    methodology: "Implemented neural network from scratch, followed by containerization and CI/CD automation for reproducible workflows",
+
     results: {
-      metrics: "Dual-model architecture successfully handling both summarization and question answering tasks with custom-built transformers",
-      impact: "Addresses increasing complexity of legal data by offering scalable AI solutions, empowering lawyers, researchers, and citizens to navigate legal documents efficiently"
+      metrics: "97.6% accuracy on MNIST test dataset",
+      impact: "Demonstrates strong understanding of deep learning fundamentals along with practical deployment skills"
     },
-    myRole: "Full-stack developer",
-    teamSize: 7,
-    duration: "Ongoing (2+ months)",
+
+    myRole: "AI/ML Developer (Model Development & Deployment)",
+    teamSize: 1,
+    duration: "2 months",
+
     timeline: {
-      start: "April 2024",
-      end: "Present"
+      start: "February 2026",
+      end: "March 2026"
     },
+
     lessonsLearned: [
-      "Deep understanding of transformer architecture internals",
-      "Importance of domain-specific data in legal NLP",
-      "Challenges of building ML models",
-      "Effective preprocessing techniques for legal documents",
-      "Integration of AI models with web applications",
-      "Team collaboration on complex AI projects"
+      "Strong understanding of neural network fundamentals",
+      "Importance of training optimization and evaluation",
+      "Hands-on experience with Docker and CI/CD pipelines",
+      "Bridging machine learning development with deployment practices",
+      "Debugging and improving model performance"
     ]
   }
 ];

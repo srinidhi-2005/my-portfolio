@@ -8,7 +8,7 @@ const About = () => {
     setIsLoaded(true);
   }, []);
 
-  const skills = ['Python', 'React JS', 'Tailwind CSS', 'Bootstrap', 'AI/ML'];
+  const skills = ['Python', 'Deep Learning', 'Transformers', 'NLP', 'Machine Learning', 'Docker'];
   const floatingElements = Array.from({ length: 6 }, (_, i) => i);
 
   return (
@@ -54,7 +54,7 @@ const About = () => {
               </div>
             </h1>
             <div className="text-xl md:text-2xl text-gray-400 font-semibold">
-              <span className="typing-animation">Full Stack Developer x AI Enthusiast</span>
+              <span className="typing-animation">AI/ML Developer | Deep Learning</span>
             </div>
           </div>
         </div>
@@ -76,11 +76,11 @@ const About = () => {
                 
                 <div className="space-y-6 text-xl text-gray-300 leading-relaxed">
                   <p className="hover:text-white transition-colors duration-300">
-                    Hello! I'm <span className="text-yellow-400 font-semibold text-xl">Srinidhi</span>, a passionate Full Stack Developer driven by curiosity for how technology learns and evolves. I integrate AI into modern web solutions—crafting seamless frontend and scalable backend to build intelligent, high-performance systems.
+                    Hey there! I'm <span className="text-yellow-400 font-semibold text-xl">Srinidhi</span>, an AI/ML developer with a strong interest in Deep Learning and building intelligent systems. I work with PyTorch on NLP and computer vision projects to solve real-world problems.
                   </p>
                   
                   <p className="hover:text-white transition-colors duration-300">
-                    I build real-time, interactive applications that merge intuitive design with AI-driven intelligence. From predictive systems to immersive 3D experiences, I thrive at the intersection of design, data, and innovation.
+                    I have experience in deploying ML applications using Docker and CI/CD. I enjoy working with data to build meaningful solutions and continuously improving my AI skills.
                   </p>
                 </div>
 
@@ -110,7 +110,7 @@ const About = () => {
                   <GraduationCap className="w-6 h-6 text-yellow-400" />
                 </div>
                 <h3 className="text-2xl font-bold text-yellow-400 mb-3 text-center">Education</h3>
-                <p className="text-gray-300 text-center text-xl">B.Tech CSE @NGIT'27</p>
+                <p className="text-gray-300 text-center text-xl">B.Tech CSE @NGIT (2023-2027)</p>
               </div>
             </div>
 
@@ -123,7 +123,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-yellow-400 mb-3 text-center">What Fuels Me</h3>
                 <p className="text-gray-300 text-center text-lg italic">
-                  "I craft responsive, real-time web applications that blend elegant frontend design with powerful AI-driven intelligence."
+                  "I'm driven by the challenge of building intelligent systems that can learn from data and solve real-world problems using AI and deep learning."
                 </p>
               </div>
             </div>

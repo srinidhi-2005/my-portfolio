@@ -1,41 +1,41 @@
 import React, { useState } from 'react';
-import { Code, Palette, Brain, Server, Star } from 'lucide-react';
+import { Code, Brain, Workflow, Globe } from 'lucide-react';
 
 const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('ai');
 
   const skillCategories = [
-    { id: 'all', name: 'All Skills', icon: <Star className="w-5 h-5" /> },
-    { id: 'frontend', name: 'Frontend', icon: <Palette className="w-5 h-5" /> },
-    { id: 'backend', name: 'Backend', icon: <Server className="w-5 h-5" /> },
     { id: 'ai', name: 'AI/ML', icon: <Brain className="w-5 h-5" /> },
-    { id: 'tools', name: 'Tools', icon: <Code className="w-5 h-5" /> }
+    { id: 'lang', name: 'Languages', icon: <Code className="w-5 h-5" /> },
+    { id: 'dev', name: 'DevOps', icon: <Workflow className="w-5 h-5" /> },
+    { id: 'web', name: 'Web Technologies', icon: <Globe className="w-5 h-5" /> }
   ];
 
   const skills = [
-    // Frontend
-    { name: 'React JS', level: 90, category: 'frontend', description: 'Building dynamic UIs' },
-    { name: 'JavaScript', level: 95, category: 'frontend', description: 'ES6+ & Modern JS' },
-    { name: 'Tailwind CSS', level: 95, category: 'frontend', description: 'Utility-first styling' },
-    { name: 'HTML/CSS', level: 100, category: 'frontend', description: 'Semantic & responsive' },
+    // ai
+    { name: 'Deep Learning', level: 87, category: 'ai' },
+    { name: 'Transformers', level: 85, category: 'ai' },
+    { name: 'NLP', level: 82, category: 'ai' },
+    { name: 'Neural Networks', level: 92, category: 'ai' },
+    { name: 'Machine Learning', level: 88, category: 'ai' },
     
-    // Backend
-    { name: 'Node.js', level: 75, category: 'backend', description: 'Server-side JavaScript' },
-    { name: 'Express.js', level: 75, category: 'backend', description: 'Fast web framework' },
-    { name: 'MongoDB', level: 50, category: 'backend', description: 'NoSQL database' },
-    { name: 'Python', level: 90, category: 'backend', description: 'Backend & scripting' },
-    { name: 'REST APIs', level: 70, category: 'backend', description: 'API design & development' },
+    // lang
+    { name: 'Python', level: 95, category: 'lang' },
+    { name: 'Java', level: 85, category: 'lang' },
+    { name: 'SQL', level: 90, category: 'lang' },
     
-    // AI/ML
-    { name: 'Machine Learning', level: 50, category: 'ai', description: 'Predictive models' },
-    { name: 'Deep Learning', level: 50, category: 'ai', description: 'Neural network architectures' },
-    { name: 'PyTorch', level: 70, category: 'ai', description: 'Deep learning framework' },
-    { name: 'Neural Networks', level: 80, category: 'ai', description: 'ANNs, CNNs' },
-    { name: 'Transformers', level: 70, category: 'ai', description: 'Attention-based models' },
+    // dev
+    { name: 'Docker', level: 90, category: 'dev' },
+    { name: 'Git & Github', level: 92, category: 'dev' },
+    { name: 'Github Actions (CI/CD)', level: 89, category: 'dev' },
     
-    // Tools
-    { name: 'Git', level: 90, category: 'tools', description: 'Version control' },
-    { name: 'VS Code', level: 95, category: 'tools', description: 'Development environment' },
+    // web
+    { name: 'React JS', level: 80, category: 'web' },
+    { name: 'Node JS', level: 75, category: 'web' },
+    { name: 'Express JS', level: 75, category: 'web' },
+    { name: 'MongoDB', level: 80, category: 'web' },
+    { name: 'REST APIs', level: 80, category: 'web' },
+    { name: 'Tailwind CSS', level: 70, category: 'web' },
   ];
 
   const filteredSkills = activeCategory === 'all' 
@@ -136,9 +136,6 @@ const Skills = () => {
                     ></div>
                   </div>
                 </div>
-
-                {/* Description */}
-                <p className="text-gray-300 text-sm">{skill.description}</p>
 
                 {/* Decorative corners */}
                 <div className="absolute top-2 left-2 w-3 h-3 border-l-2 border-t-2 border-yellow-400/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

@@ -11,4 +11,4 @@ const Tooltip = ({ message, children }) => {
   );
 };
 
-export default Tooltip; 
+export default Tooltip;

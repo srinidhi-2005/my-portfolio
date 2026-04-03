@@ -13,7 +13,7 @@ A modern, responsive portfolio website built with React and Tailwind CSS to show
 
 ### 2. About Me Section
 
-- Professional headshot and introduction
+- Professional head shot and introduction
 - Interactive timeline of career progression
 
 ### 3. Skills Showcase
@@ -70,48 +70,6 @@ A modern, responsive portfolio website built with React and Tailwind CSS to show
 - Jest and React Testing Library for testing
 - Web Vitals for performance monitoring
 
-## 📦 Installation and Setup
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/srinidhi-2005/my-portfolio.git
-cd portfolio
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Create a `.env` file in the root directory with the following variables:
-
-```
-REACT_APP_EMAILJS_SERVICE_ID=your_service_id
-REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
-REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
-```
-
-4. Start the development server:
-
-```bash
-npm start
-```
-
-The application will be available at `http://localhost:3000`
-
-## 🏗️ Building for Production
-
-1. Create a production build:
-
-```bash
-npm run build
-```
-
-2. The build files will be generated in the `build` directory
-3. Deploy the contents of the `build` directory to your hosting service
-
 ## 📁 Project Structure
 
 ```
@@ -133,29 +91,6 @@ src/
 ├── data/          # Static data and configurations
 ├── App.js         # Main application component
 └── index.js       # Application entry point
-```
-
-## 🎨 Customization
-
-### Styling
-
-- Modify `tailwind.config.js` for theme customization
-- Update color schemes and typography in the configuration
-- Add custom animations in the CSS files
-
-### Content
-
-- Update project information in the data files
-- Modify the About section with your personal information
-- Customize the Skills section with your expertise
-- Add or remove sections as needed
-
-## 🧪 Testing
-
-Run the test suite:
-
-```bash
-npm test
 ```
 
 ## 👤 Contact and Support

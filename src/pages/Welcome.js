@@ -19,10 +19,10 @@ export default function WelcomeSection() {
       <div className="container mx-auto px-4 md:px-6 z-10 relative flex flex-row-reverse items-center justify-between">
         <div className="max-w-3xl ml-auto flex-1">
           <h2 className="text-yellow-400 font-semibold mb-7 text-3xl">I'm an</h2>
-          <h1 className="text-5xl font-bold mb-6 text-white">AI-Driven Full Stack Developer</h1>
+          <h1 className="text-5xl font-bold mb-6 text-white">AI/ML Developer</h1>
           <div className="h-1 w-24 bg-yellow-400 mb-8"></div>
-          <h3 className="text-gray-300 mb-3 max-w-lg text-2xl">"I create immersive experiences, </h3>
-          <h3 className="text-gray-300 mb-16 max-w-lg text-2xl"> not just websites..."</h3>
+          <h3 className="text-gray-300 mb-3 max-w-lg text-2xl italic">"I build AI-powered systems </h3>
+          <h3 className="text-gray-300 mb-16 max-w-lg text-2xl italic"> to solve real-world problems..."</h3>
           <div className="flex space-x-7 mb-8">
             <button
               className="inline-block px-8 py-3 font-semibold rounded-sm transition-colors bg-yellow-400 text-black hover:bg-yellow-300"
@@ -95,8 +95,8 @@ export default function WelcomeSection() {
         
         <div className="relative group">
           <a
-            href={require('../assets/Srinidhi Martha Resume.pdf')}
-            download="Srinidhi Martha_Resume.pdf"
+            href={require('../assets/Srinidhi_Martha_Resume.pdf')}
+            download="Srinidhi_Martha_Resume.pdf"
             className="border-2 border-yellow-400 rounded-full p-2 text-gray-400 hover:text-yellow-400 hover:border-white transition-colors shadow-lg bg-black/60 backdrop-blur block"
           >
             <ImDownload2 size={40} />

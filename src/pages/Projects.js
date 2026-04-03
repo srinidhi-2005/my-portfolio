@@ -77,9 +77,9 @@ const Projects = () => {
               <div className={`relative h-96 rounded-3xl bg-gradient-to-br ${projects[currentIndex].color} p-1 shadow-2xl shadow-yellow-400/10`}>
                 <div className="w-full h-full bg-gray-900/90 backdrop-blur-sm rounded-3xl overflow-hidden">
                   <div className="relative w-full h-full flex items-center justify-center">
-                    {projects[currentIndex].image ? (
+                    {projects[currentIndex].thumbnail ? (
                       <img 
-                        src={projects[currentIndex].image}
+                        src={projects[currentIndex].thumbnail}
                         alt={projects[currentIndex].title}
                         className="w-full h-full object-cover rounded-3xl"
                       />
@@ -88,15 +88,6 @@ const Projects = () => {
                         <Code2 className="w-16 h-16 text-yellow-400/50" />
                       </div>
                     )}
-                    
-                    <div className="absolute top-6 right-6 flex space-x-3 opacity-0 group-hover:opacity-100 transition-all duration-500">
-                      <button 
-                        onClick={handleGithubClick}
-                        className="w-12 h-12 bg-white/10 backdrop-blur-sm text-white rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110 shadow-lg"
-                      >
-                        <Github className="w-5 h-5" />
-                      </button>
-                    </div>
 
                     <div className="absolute bottom-6 left-6 flex items-center space-x-3">
                       <div className={`flex items-center space-x-2 px-4 py-2 rounded-full backdrop-blur-sm ${
@@ -144,7 +135,7 @@ const Projects = () => {
                 
                 <p className="text-gray-300 text-lg leading-relaxed">
                   {truncateDescription(projects[currentIndex].description, 10)}
-                  {projects[currentIndex].description.split(' ').length > 10 && (
+                  {projects[currentIndex].description.split(' ').length > 16 && (
                     <button 
                       onClick={() => setShowFullDescription(!showFullDescription)}
                       className="ml-2 text-yellow-400 hover:text-yellow-300 font-semibold focus:outline-none"
