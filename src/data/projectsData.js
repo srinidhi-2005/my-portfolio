@@ -21,12 +21,12 @@ export const projectsData = [
     technologies: ['Python', 'PyTorch', 'Transformers', 'NLP'],
 
     category: 'AI/ML',
-    year: '2025',
+    year: '2026',
     status: 'Completed',
     color: 'from-yellow-400/20 to-yellow-600/20',
 
     liveUrl: '/',
-    githubUrl: 'https://github.com/srinidhi-2005',
+    githubUrl: 'https://github.com/srinidhi-2005/text-summarizer',
 
     type: 'Team',
 
@@ -60,12 +60,12 @@ export const projectsData = [
     },
 
     myRole: "AI/ML Developer (Model Development & NLP Pipeline)",
-    teamSize: 7,
-    duration: "4 months",
+    teamSize: 4,
+    duration: "5 months",
 
     timeline: {
-      start: "April 2025",
-      end: "July 2025"
+      start: "March 2026",
+      end: "July 2026"
     },
 
     lessonsLearned: [

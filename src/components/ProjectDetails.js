@@ -129,7 +129,7 @@ const ProjectDetails = () => {
               <div className="relative mb-8 group">
                 <img
                   src={project.images[currentImageIndex]}
-                  alt={`${project.title} - Image ${currentImageIndex + 1}`}
+                  alt={`${project.title} - view ${currentImageIndex + 1}`}
                   className="w-full max-h-96 object-contain rounded-2xl shadow-lg border border-yellow-400/20 mx-auto transition-opacity duration-500"
                   style={{ maxWidth: '80%' }}
                 />

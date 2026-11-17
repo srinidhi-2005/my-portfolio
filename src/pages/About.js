@@ -76,11 +76,11 @@ const About = () => {
                 
                 <div className="space-y-6 text-xl text-gray-300 leading-relaxed">
                   <p className="hover:text-white transition-colors duration-300">
-                    Hey there! I'm <span className="text-yellow-400 font-semibold text-xl">Srinidhi</span>, an AI/ML developer with a strong interest in Deep Learning and building intelligent systems. I work with PyTorch on NLP and computer vision projects to solve real-world problems.
+                    Hey there! I'm <span className="text-yellow-400 font-semibold text-xl">Srinidhi</span>, a CSE undergraduate with a strong interest in Artificial Intelligence, Machine Learning and Deep Learning. I enjoy developing intelligent systems using transformer-based NLP architectures and CNN-powered computer vision techniques.
                   </p>
                   
                   <p className="hover:text-white transition-colors duration-300">
-                    I have experience in deploying ML applications using Docker and CI/CD. I enjoy working with data to build meaningful solutions and continuously improving my AI skills.
+                    My experience includes building end-to-end machine learning applications, from data preprocessing and model training to evaluation and deployment. I work primarily with Python and PyTorch, while exploring technologies that help transform machine learning models into practical applications.
                   </p>
                 </div>
 
@@ -123,7 +123,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-yellow-400 mb-3 text-center">What Fuels Me</h3>
                 <p className="text-gray-300 text-center text-lg italic">
-                  "I'm driven by the challenge of building intelligent systems that can learn from data and solve real-world problems using AI and deep learning."
+                  "Driven by curiosity to understand how intelligent systems learn, adapt and solve real-world problems"
                 </p>
               </div>
             </div>
