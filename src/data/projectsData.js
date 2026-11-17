@@ -4,8 +4,9 @@ import img1_3 from '../assets/img1_3.png';
 import img2_1 from '../assets/img2_1.png';
 import img2_2 from '../assets/img2_2.png';
 import img2_3 from '../assets/img2_3.png';
-import img from '../assets/img.jpg';
-import img1 from '../assets/image.jpg';
+import img3_1 from '../assets/img3_1.png';
+import img3_2 from '../assets/img3_2.png';
+import img3_3 from '../assets/img3_3.png';
 
 export const projectsData = [
   {
@@ -151,8 +152,8 @@ export const projectsData = [
 
     description: 'Built a neural network model from scratch in Python to classify handwritten digits from the MNIST dataset. The project demonstrates core deep learning concepts along with containerization using Docker and automation through CI/CD pipelines.',
 
-    thumbnail: [img],
-    images: [img, img1, img],
+    thumbnail: [img3_1],
+    images: [img3_1, img3_2, img3_3],
 
     technologies: ['Python', 'Neural Networks', 'NumPy', 'Docker', 'GitHub Actions (CI/CD)'],
 

@@ -41,7 +41,7 @@ const Projects = () => {
   };
 
   const handleGithubClick = () => {
-    window.open("https://github.com/srinidhi-2005", "_blank");
+    window.open(projects[currentIndex].githubUrl, "_blank");
   };  
 
   const truncateDescription = (description, wordLimit) => {
