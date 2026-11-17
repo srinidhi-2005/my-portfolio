@@ -7,6 +7,9 @@ import img2_3 from '../assets/img2_3.png';
 import img3_1 from '../assets/img3_1.png';
 import img3_2 from '../assets/img3_2.png';
 import img3_3 from '../assets/img3_3.png';
+import img4_1 from '../assets/img4_1.png';
+import img4_2 from '../assets/img4_2.png';
+import img4_3 from '../assets/img4_3.png';
 
 export const projectsData = [
   {
@@ -211,6 +214,78 @@ export const projectsData = [
       "Hands-on experience with Docker and CI/CD pipelines",
       "Bridging machine learning development with deployment practices",
       "Debugging and improving model performance"
+    ]
+  },
+  {
+    id: 4,
+    title: 'Palette & Pages — Book Management System',
+    subtitle: 'Full-stack creative book management with React, Spring Boot & MySQL',
+
+    description: 'Developed a full-stack book management application enabling users to add, update, delete and manage book records efficiently. Built RESTful APIs using Spring Boot with MySQL for persistent data storage and designed a responsive React.js frontend for seamless book exploration and management across creativity, photography, sketching, cooking and artistic inspiration.',
+
+    thumbnail: [img4_1],
+    images: [img4_1, img4_2, img4_3],
+
+    technologies: ['React.js', 'Spring Boot', 'MySQL'],
+
+    category: 'Full Stack',
+    year: '2026',
+    status: 'Completed',
+    color: 'from-yellow-400/20 to-amber-600/20',
+
+    liveUrl: '/',
+    githubUrl: 'https://github.com/srinidhi-2005/palette-pages-fullstack',
+
+    type: 'Individual',
+
+    features: [
+      'Full CRUD book management — add, update, delete and view all books',
+      'Search and filter books by title, author and price',
+      'Optional image URL support with dynamic book cover previews',
+      'RESTful Spring Boot APIs with Spring Data JPA and Hibernate',
+      'Data validation and global exception handling on the backend',
+      'Responsive card-based React.js UI with creative aesthetic and hover animations',
+      'Secure database credentials via environment variable configuration'
+    ],
+
+    challenges: [
+      'Designing clean RESTful API contracts for all CRUD and search operations',
+      'Integrating React frontend with Spring Boot backend via Axios',
+      'Implementing flexible search APIs across multiple book fields',
+      'Building a responsive, visually cohesive UI for creative book browsing'
+    ],
+
+    futureEnhancements: [
+      'User authentication',
+      'Favorites / wishlist support',
+      'Cloud image upload',
+      'Pagination for large book collections',
+      'Dark mode',
+      'Production deployment'
+    ],
+
+    methodology: "Built backend CRUD and search REST APIs with Spring Boot and MySQL, then connected a React.js frontend for interactive book management and filtering",
+
+    results: {
+      metrics: "Complete CRUD + search API suite (title, author, price) with MySQL persistence",
+      impact: "Provides a creative digital space to organize and manage books inspired by art, photography, cooking and visual storytelling"
+    },
+
+    myRole: "Full Stack Developer (React Frontend & Spring Boot Backend)",
+    teamSize: 1,
+    duration: "1 month",
+
+    timeline: {
+      start: "May 2026",
+      end: "May 2026"
+    },
+
+    lessonsLearned: [
+      "End-to-end full-stack development with React and Spring Boot",
+      "Designing and consuming RESTful APIs for CRUD workflows",
+      "MySQL integration with Spring Data JPA and Hibernate",
+      "Handling validation and exceptions in backend services",
+      "Building responsive, interactive UIs for data-driven applications"
     ]
   }
 ];

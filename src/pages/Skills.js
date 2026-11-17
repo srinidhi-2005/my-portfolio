@@ -15,8 +15,11 @@ import {
   SiGithubactions,
   SiHuggingface,
   SiScikitlearn,
-  SiTensorflow
+  SiTensorflow,
+  SiSpringboot,
+  SiTailwindcss
 } from 'react-icons/si';
+import { VscCode } from 'react-icons/vsc';
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('ai');
@@ -47,13 +50,16 @@ const Skills = () => {
     // back
     { name: 'FastAPI', category: 'back', icon: <SiFastapi className="w-6 h-6" />, description: 'High-performance Python APIs with async support.' },
     { name: 'React.js', category: 'back', icon: <SiReact className="w-6 h-6" />, description: 'Building responsive, component-driven user interfaces.' },
+    { name: 'Tailwind CSS', category: 'back', icon: <SiTailwindcss className="w-6 h-6" />, description: 'Utility-first CSS framework for responsive UI development.' },
     { name: 'Node.js', category: 'back', icon: <SiNodedotjs className="w-6 h-6" />, description: 'Server-side JavaScript for APIs and real-time apps.' },
     { name: 'Express.js', category: 'back', icon: <SiExpress className="w-6 h-6" />, description: 'Lightweight routing and middleware for Node backends.' },
+    { name: 'Spring Boot', category: 'back', icon: <SiSpringboot className="w-6 h-6" />, description: 'Building scalable Java backend applications and RESTful services.' },
 
     // dev
     { name: 'Docker', category: 'dev', icon: <SiDocker className="w-6 h-6" />, description: 'Containerizing apps for consistent local and cloud runs.' },
     { name: 'Git & Github', category: 'dev', icon: <SiGithub className="w-6 h-6" />, description: 'Version control, collaboration and code review workflows.' },
     { name: 'Github Actions (CI/CD)', category: 'dev', icon: <SiGithubactions className="w-6 h-6" />, description: 'Automating tests, builds and deployments on every push.' },
+    { name: 'VS Code', category: 'dev', icon: <VscCode className="w-6 h-6" />, description: 'Code editor for development, debugging and project management.' },
 
     // db
     { name: 'MySQL', category: 'db', icon: <SiMysql className="w-6 h-6" />, description: 'Relational database design, indexing and query optimization.' },
